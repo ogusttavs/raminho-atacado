@@ -124,8 +124,9 @@ export default function Contact() {
               }}
             >
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Nome</label>
+                <label htmlFor="nome" className="block text-sm font-medium text-gray-700 mb-2">Nome</label>
                 <input
+                  id="nome"
                   type="text"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all"
                   placeholder="Seu nome completo"
@@ -133,16 +134,18 @@ export default function Contact() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">E-mail</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">E-mail</label>
                   <input
+                    id="email"
                     type="email"
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all"
                     placeholder="seu@email.com"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
+                  <label htmlFor="telefone" className="block text-sm font-medium text-gray-700 mb-2">Telefone</label>
                   <input
+                    id="telefone"
                     type="tel"
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all"
                     placeholder="(11) 99999-9999"
@@ -150,8 +153,8 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Assunto</label>
-                <select className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all bg-white">
+                <label htmlFor="assunto" className="block text-sm font-medium text-gray-700 mb-2">Assunto</label>
+                <select id="assunto" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all bg-white">
                   <option>Selecione uma opção</option>
                   <option>Vendas / Atacado</option>
                   <option>Financeiro</option>
@@ -160,8 +163,9 @@ export default function Contact() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                <label htmlFor="mensagem" className="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
                 <textarea
+                  id="mensagem"
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all resize-none"
                   placeholder="Como podemos ajudar?"

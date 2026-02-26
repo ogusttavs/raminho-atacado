@@ -60,6 +60,9 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop"
                 alt="Mercado Municipal"
+                loading="lazy"
+                width="800"
+                height="600"
                 className="w-full h-full object-cover"
               />
 

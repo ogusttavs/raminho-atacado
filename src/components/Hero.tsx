@@ -9,6 +9,8 @@ export default function Hero() {
         <img
           src="/hero-bg.jpg"
           alt="Frutas Premium no Atacado - Raminho Importadora"
+          width="1920"
+          height="1080"
           className="w-full h-full object-cover opacity-50"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent" />

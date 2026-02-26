@@ -21,7 +21,10 @@ export default function Footer() {
               <img
                 src="/Logo.png"
                 alt="Raminho Importadora"
-                className="h-16 rounded-lg bg-white/10 p-1"
+                width="160"
+                height="64"
+                className="h-16 w-auto rounded-lg bg-white/10 p-1"
+                loading="lazy"
               />
             </div>
             <p className="text-gray-400 leading-relaxed">
@@ -32,6 +35,7 @@ export default function Footer() {
                 href="https://www.instagram.com/raminhoimportadora"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Siga nosso Instagram"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all"
               >
                 <Instagram size={20} />
@@ -40,6 +44,7 @@ export default function Footer() {
                 href="https://wa.me/5511940361803"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Fale conosco no WhatsApp"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-all"
               >
                 <MessageCircle size={20} />
@@ -101,6 +106,7 @@ export default function Footer() {
             <form className="space-y-3">
               <input
                 type="email"
+                aria-label="Seu e-mail da newsletter"
                 placeholder="Seu e-mail"
                 className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-secondary text-white placeholder-gray-500 transition-colors"
               />

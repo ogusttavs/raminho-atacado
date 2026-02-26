@@ -54,11 +54,13 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="block">
+            <a href="#" aria-label="Ir para a página inicial" className="block">
               <img
                 src="/Logo.png"
                 alt="Raminho Importadora"
-                className={`transition-all duration-500 ${scrolled ? 'h-12' : 'h-16'}`}
+                width="160"
+                height="64"
+                className={`w-auto transition-all duration-500 ${scrolled ? 'h-12' : 'h-16'}`}
                 style={!scrolled ? { filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' } : undefined}
               />
             </a>
