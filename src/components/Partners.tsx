@@ -63,47 +63,50 @@ export default function Partners() {
                 {/* Partners Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
                     <AnimatePresence mode="popLayout">
-                        {(showAll ? partners : partners.slice(0, 2)).map((partner, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.15, duration: 0.6 }}
-                                className="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/10 relative overflow-hidden"
-                            >
-                                {/* Decorative Gradient */}
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-secondary/10 to-transparent rounded-bl-full" />
+                        {partners.map((partner, index) => {
+                            const isHiddenOnMobile = !showAll && index >= 2;
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.15, duration: 0.6 }}
+                                    className={`group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/10 relative overflow-hidden ${isHiddenOnMobile ? 'hidden md:block' : 'block'}`}
+                                >
+                                    {/* Decorative Gradient */}
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-secondary/10 to-transparent rounded-bl-full" />
 
-                                {/* Partner Logo */}
-                                <div className={`w-full h-24 flex items-center justify-start mb-6 ${partner.logoBg ? partner.logoBg + ' rounded-xl px-4' : ''}`}>
-                                    <img
-                                        src={partner.logo}
-                                        alt={`Logo ${partner.name}`}
-                                        loading="lazy"
-                                        width="160"
-                                        height="80"
-                                        className="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                                    />
-                                </div>
+                                    {/* Partner Logo */}
+                                    <div className={`w-full h-24 flex items-center justify-start mb-6 ${partner.logoBg ? partner.logoBg + ' rounded-xl px-4' : ''}`}>
+                                        <img
+                                            src={partner.logo}
+                                            alt={`Logo ${partner.name}`}
+                                            loading="lazy"
+                                            width="160"
+                                            height="80"
+                                            className="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                                        />
+                                    </div>
 
-                                <h3 className="text-2xl font-serif font-bold text-primary mb-2">{partner.name}</h3>
-                                <span className="inline-block px-3 py-1 bg-secondary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full mb-4">
-                                    {partner.since}
-                                </span>
-                                <p className="text-gray-600 leading-relaxed mb-4">{partner.description}</p>
-                                <div className="flex items-center gap-2 text-sm font-medium text-secondary">
-                                    <Handshake size={16} />
-                                    {partner.specialty}
-                                </div>
-                            </motion.div>
-                        ))}
+                                    <h3 className="text-2xl font-serif font-bold text-primary mb-2">{partner.name}</h3>
+                                    <span className="inline-block px-3 py-1 bg-secondary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full mb-4">
+                                        {partner.since}
+                                    </span>
+                                    <p className="text-gray-600 leading-relaxed mb-4">{partner.description}</p>
+                                    <div className="flex items-center gap-2 text-sm font-medium text-secondary">
+                                        <Handshake size={16} />
+                                        {partner.specialty}
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
                     </AnimatePresence>
                 </div>
 
-                {/* Toggle Button */}
+                {/* Toggle Button (Mobile Only) */}
                 {partners.length > 2 && (
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 md:hidden">
                         <button
                             onClick={() => setShowAll(!showAll)}
                             className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-colors duration-300"
