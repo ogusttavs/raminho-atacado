@@ -7,7 +7,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 bg-primary">
         <img
-          src="/hero-bg.jpg"
+          src="/hero-bg.webp"
           alt="Frutas Premium no Atacado - Raminho Importadora"
           width="1920"
           height="1080"

@@ -3,17 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Values from './components/Values';
 import About from './components/About';
 import Wholesale from './components/Wholesale';
-import Products from './components/Products';
-import Retail from './components/Retail';
-import Partners from './components/Partners';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import FloatingActions from './components/FloatingActions';
+
+// Lazy loading below-the-fold components to reduce initial JS execution size
+const Products = lazy(() => import('./components/Products'));
+const Retail = lazy(() => import('./components/Retail'));
+const Partners = lazy(() => import('./components/Partners'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
+const FloatingActions = lazy(() => import('./components/FloatingActions'));
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 export default function App() {
@@ -58,12 +61,14 @@ export default function App() {
         <Values />
         <About />
         <Wholesale />
-        <Products />
-        <Retail />
-        <Partners />
-        <Contact />
-        <Footer />
-        <FloatingActions />
+        <Suspense fallback={<div className="h-32 flex items-center justify-center text-secondary">Carregando...</div>}>
+          <Products />
+          <Retail />
+          <Partners />
+          <Contact />
+          <Footer />
+          <FloatingActions />
+        </Suspense>
       </div>
     </HelmetProvider>
   );
