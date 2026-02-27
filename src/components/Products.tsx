@@ -5,22 +5,22 @@ export default function Products() {
     {
       name: 'Frutas Nacionais',
       image: '/frutas-nacionais.png',
-      desc: 'Morangos, framboesas, mirtilos, amoras e muito mais direto dos melhores produtores.',
+      desc: 'Do campo direto para o caminhão. Morangos, melões e muito mais com o padrão de excelência dos melhores produtores.',
     },
     {
       name: 'Frutas Importadas',
       image: '/frutas-importadas.png',
-      desc: 'Maçãs, pêras, kiwis, uvas e frutas premium importadas da Argentina, Chile e mais.',
+      desc: 'O Brix exato e a firmeza ideal. Maçãs, pêras, kiwis e uvas chilenas e argentinas selecionadas a dedo.',
     },
     {
       name: 'Frutas Exóticas',
       image: '/frutas-exoticas.png',
-      desc: 'Pitaya, physalis, lichia, mangostim, rambutã e outras raridades para seu negócio.',
+      desc: 'Agregue valor à sua banca com pitaya, lichia, physalis e outras frutas de alta demanda comercial.',
     },
     {
-      name: 'Frutas da Estação',
+      name: 'Aproveite a Safra',
       image: '/frutas-estacao.png',
-      desc: 'Seleção sazonal com o melhor sabor e preço de cada época do ano.',
+      desc: 'O melhor custo-benefício. Caixaria volumosa, sabor no pico e qualidade garantida nas frutas do momento.',
     },
   ];
 
@@ -68,12 +68,14 @@ export default function Products() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 sm:mt-24 text-center">
           <a
-            href="#contact"
+            href="https://wa.me/5511940361803"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-primary bg-secondary hover:bg-secondary/90 md:py-4 md:text-lg md:px-10 transition-colors"
           >
-            Solicitar Cotação no Atacado
+            Receber Tabela de Preços e Cotações
           </a>
         </div>
       </div>

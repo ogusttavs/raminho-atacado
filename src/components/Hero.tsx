@@ -23,12 +23,12 @@ export default function Hero() {
             <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[7.5rem] font-bold leading-tight text-white mb-6 sm:mb-8 2xl:mb-12">
               Raminho Importadora <br />
               <span className="text-secondary text-2xl sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-[4.5rem] block mt-2 sm:mt-4 2xl:mt-6 font-light italic">
-                Seu parceiro no Atacado de Frutas
+                Padrão Extra no Atacado
               </span>
             </h1>
 
             <p className="text-xl 2xl:text-3xl text-gray-200 mb-10 2xl:mb-16 font-light leading-relaxed max-w-xl 2xl:max-w-3xl">
-              Distribuição de frutas nacionais e importadas para o seu negócio. Qualidade, frescor e compromisso do produtor diretamente para você.
+              Do Mercadão direto para o seu hortifruti ou restaurante. Caixaria selecionada, giro rápido e logística firme para sua banca nunca ficar desabastecida.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 justify-center md:justify-start">
@@ -36,14 +36,14 @@ export default function Hero() {
                 href="#wholesale"
                 className="px-8 sm:px-10 py-4 bg-secondary text-primary font-bold uppercase tracking-wider hover:bg-white transition-all shadow-lg flex items-center justify-center gap-2 group rounded-sm min-h-[48px]"
               >
-                Comprar no Atacado
+                Fazer Cotação do Dia
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="#partners"
                 className="px-8 sm:px-10 py-4 border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-primary transition-all rounded-sm text-center min-h-[48px] flex items-center justify-center"
               >
-                Seja Fornecedor
+                Seja Nosso Fornecedor
               </a>
             </div>
           </div>

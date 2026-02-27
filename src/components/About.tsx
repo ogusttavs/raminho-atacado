@@ -15,20 +15,20 @@ export default function About() {
             className="relative z-10"
           >
             <div className="inline-block px-4 py-2 2xl:px-6 2xl:py-3 bg-white rounded-full shadow-sm text-primary font-semibold text-sm 2xl:text-base mb-6">
-              Sobre Nós
+              Sobre a Raminho
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-serif font-bold text-primary mb-6 2xl:mb-10 leading-tight">
-              Tradição que atravessa <br />
+              De geração em geração, entendemos de <br />
               <span className="relative inline-block">
-                <span className="relative z-10">gerações</span>
+                <span className="relative z-10">safra e qualidade</span>
                 <span className="absolute bottom-2 left-0 w-full h-3 2xl:h-5 bg-secondary/30 -z-0"></span>
               </span>
             </h2>
             <p className="text-base sm:text-lg 2xl:text-2xl text-gray-600 mb-6 2xl:mb-8 leading-relaxed">
-              Fundada há mais de 40 anos, a Raminho Importadora nasceu da paixão por frutas de qualidade. O que começou como um pequeno negócio familiar no Mercado Municipal de São Paulo cresceu para se tornar uma referência em importação e <strong className="text-primary">distribuição atacadista</strong> de frutas premium.
+              O que começou há mais de 40 anos como uma pequena banca familiar no Mercado Municipal de São Paulo, cresceu para se tornar referência em <strong className="text-primary">padrão superior</strong> de frutas na CEAGESP e no Mercadão. Não lidamos com sobra; lidamos com qualidade que faz diferença no balcão.
             </p>
             <p className="text-base sm:text-lg 2xl:text-2xl text-gray-600 mb-8 2xl:mb-12 leading-relaxed">
-              Nosso foco é o <strong className="text-primary">atacado</strong>: abastecemos restaurantes, hotéis, mercados e empórios com frutas nacionais e importadas selecionadas. Unimos décadas de experiência com logística moderna para garantir frescor e regularidade no fornecimento.
+              Nós sabemos escolher o melhor <strong className="text-primary">calibre</strong> e as melhores safras. Nosso contato direto com os produtores do campo e grandes importadores garante que você receba um abastecimento constante, justo e com giro rápido, faça chuva ou faça sol.
             </p>
 
             <div className="grid grid-cols-2 gap-6">

@@ -37,11 +37,11 @@ export default function Retail() {
                             </div>
 
                             <h3 className="text-3xl 2xl:text-5xl font-serif font-bold mb-4 2xl:mb-6">
-                                Loja no Mercado Municipal
+                                Nossa Banca no Mercadão
                             </h3>
 
                             <p className="text-white/80 text-lg 2xl:text-2xl leading-relaxed mb-8 2xl:mb-12">
-                                Visite nossa loja física no coração de São Paulo. Frutas frescas selecionadas todos os dias para você levar para casa.
+                                Sinta a qualidade de perto. O mesmo padrão extra que roda no atacado, disponível para você levar para casa direto do nosso box no coração de São Paulo.
                             </p>
 
                             <div className="space-y-4 mb-8">
@@ -94,11 +94,12 @@ export default function Retail() {
 
                             <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm mb-8">
                                 <div className="flex items-center gap-3 mb-3">
-                                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                                    <span className="text-sm font-semibold text-green-700 uppercase tracking-wider">Loja Online Ativa</span>
+                                    <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
+                                    <span className="text-sm font-semibold text-primary uppercase tracking-wider">Atenção</span>
                                 </div>
                                 <p className="text-gray-500 text-sm">
-                                    Frete grátis para pedidos acima de R$497 na Grande São Paulo.
+                                    As compras no E-commerce são <strong>exclusivas para o varejo</strong> (consumidor final).
+                                    Para cotações de caixaria (Atacado), <a href="https://wa.me/5511940361803" className="text-secondary font-semibold hover:underline border-none">chame no WhatsApp</a>.
                                 </p>
                             </div>
 
