@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+
+// Lazy load mobile menu (which uses AnimatePresence from framer-motion)
+const MobileMenu = lazy(() => import('./MobileMenu'));
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,11 +48,11 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-500 ${scrolled
-        ? 'bg-white/80 backdrop-blur-md shadow-sm py-3'
-        : 'bg-transparent py-6'
+        ? 'bg-white/90 backdrop-blur-md shadow-sm py-3 2xl:py-4'
+        : 'bg-transparent py-6 2xl:py-10'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
@@ -115,45 +117,17 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-100 shadow-xl overflow-hidden"
-          >
-            <div className="px-4 pt-4 pb-8 space-y-2">
-              {navLinks.map((link) => {
-                const isActive = activeSection === link.href.replace('#', '');
-                return (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-3 text-lg font-medium rounded-xl transition-colors ${isActive
-                      ? 'text-primary bg-primary/5 font-bold'
-                      : 'text-gray-900 hover:text-primary hover:bg-gray-50'
-                      }`}
-                  >
-                    {link.name}
-                  </a>
-                );
-              })}
-              <div className="mt-6 px-2">
-                <a
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full text-center px-5 py-4 rounded-xl bg-primary text-white font-bold text-lg hover:bg-primary/90 transition-colors shadow-lg"
-                >
-                  Fale Conosco
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Mobile Menu (lazy loaded with framer-motion) */}
+      {isOpen && (
+        <Suspense fallback={null}>
+          <MobileMenu
+            isOpen={isOpen}
+            navLinks={navLinks}
+            activeSection={activeSection}
+            onClose={() => setIsOpen(false)}
+          />
+        </Suspense>
+      )}
     </nav>
   );
 }

@@ -3,8 +3,8 @@ import { Award, Truck, Users, Clock } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gray-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 2xl:py-32 bg-gray-50 overflow-hidden">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
           <motion.div
@@ -14,20 +14,20 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="relative z-10"
           >
-            <div className="inline-block px-4 py-2 bg-white rounded-full shadow-sm text-primary font-semibold text-sm mb-6">
+            <div className="inline-block px-4 py-2 2xl:px-6 2xl:py-3 bg-white rounded-full shadow-sm text-primary font-semibold text-sm 2xl:text-base mb-6">
               Sobre Nós
             </div>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-serif font-bold text-primary mb-6 2xl:mb-10 leading-tight">
               Tradição que atravessa <br />
               <span className="relative inline-block">
                 <span className="relative z-10">gerações</span>
-                <span className="absolute bottom-2 left-0 w-full h-3 bg-secondary/30 -z-0"></span>
+                <span className="absolute bottom-2 left-0 w-full h-3 2xl:h-5 bg-secondary/30 -z-0"></span>
               </span>
             </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg 2xl:text-2xl text-gray-600 mb-6 2xl:mb-8 leading-relaxed">
               Fundada há mais de 40 anos, a Raminho Importadora nasceu da paixão por frutas de qualidade. O que começou como um pequeno negócio familiar no Mercado Municipal de São Paulo cresceu para se tornar uma referência em importação e <strong className="text-primary">distribuição atacadista</strong> de frutas premium.
             </p>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg 2xl:text-2xl text-gray-600 mb-8 2xl:mb-12 leading-relaxed">
               Nosso foco é o <strong className="text-primary">atacado</strong>: abastecemos restaurantes, hotéis, mercados e empórios com frutas nacionais e importadas selecionadas. Unimos décadas de experiência com logística moderna para garantir frescor e regularidade no fornecimento.
             </p>
 

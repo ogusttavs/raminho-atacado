@@ -25,19 +25,19 @@ export default function Products() {
   ];
 
   return (
-    <section id="products" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-primary font-semibold tracking-wider uppercase text-sm">Nossa Seleção</span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mt-2">
+    <section id="products" className="py-20 2xl:py-32 bg-white">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16">
+        <div className="text-center mb-16 2xl:mb-24">
+          <span className="text-primary font-semibold tracking-wider uppercase text-sm 2xl:text-base">Nossa Seleção</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-serif font-bold text-gray-900 mt-2 2xl:mt-4">
             Nacionais e Importadas
           </h2>
-          <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+          <p className="text-lg 2xl:text-2xl text-gray-600 mt-4 2xl:mt-6 max-w-2xl 2xl:max-w-4xl mx-auto">
             Importamos e distribuímos as melhores frutas do Brasil e do mundo. Variedade, frescor e qualidade garantidos para o seu negócio.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 2xl:gap-12">
           {categories.map((category, index) => (
             <motion.div
               key={index}
@@ -57,9 +57,9 @@ export default function Products() {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 p-5 sm:p-6 text-white">
-                  <h3 className="text-xl sm:text-2xl font-serif font-bold mb-1 sm:mb-2">{category.name}</h3>
-                  <p className="text-sm text-gray-200 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:transform md:translate-y-4 md:group-hover:translate-y-0">
+                <div className="absolute bottom-0 left-0 p-5 sm:p-6 2xl:p-8 text-white">
+                  <h3 className="text-xl sm:text-2xl 2xl:text-3xl font-serif font-bold mb-1 sm:mb-2">{category.name}</h3>
+                  <p className="text-sm 2xl:text-lg text-gray-200 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:transform md:translate-y-4 md:group-hover:translate-y-0">
                     {category.desc}
                   </p>
                 </div>

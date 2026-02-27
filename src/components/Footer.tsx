@@ -12,9 +12,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-primary text-white pt-20 pb-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <footer className="bg-primary text-white pt-20 2xl:pt-32 pb-10 2xl:pb-16">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 2xl:gap-20 mb-16 2xl:mb-24">
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center">

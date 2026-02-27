@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
@@ -11,32 +10,24 @@ export default function Hero() {
           alt="Frutas Premium no Atacado - Raminho Importadora"
           width="1920"
           height="1080"
+          fetchPriority="high"
+          decoding="async"
           className="w-full h-full object-cover opacity-50"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 md:pt-0">
-        <div className="max-w-3xl mx-auto md:mx-0 text-center md:text-left">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <div className="inline-block mb-6 border-l-4 border-secondary pl-4 text-left">
-              <span className="text-secondary font-bold tracking-widest uppercase text-sm">
-                Desde 1980
-              </span>
-            </div>
-
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-white mb-6 sm:mb-8">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 md:pt-0 2xl:px-16">
+        <div className="max-w-3xl 2xl:max-w-5xl mx-auto md:mx-0 text-center md:text-left">
+          <div className="animate-hero-fade-in">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[7.5rem] font-bold leading-tight text-white mb-6 sm:mb-8 2xl:mb-12">
               Raminho Importadora <br />
-              <span className="text-secondary text-2xl sm:text-3xl md:text-5xl lg:text-6xl block mt-2 sm:mt-4 font-light italic">
+              <span className="text-secondary text-2xl sm:text-3xl md:text-5xl lg:text-6xl 2xl:text-[4.5rem] block mt-2 sm:mt-4 2xl:mt-6 font-light italic">
                 Seu parceiro no Atacado de Frutas
               </span>
             </h1>
 
-            <p className="text-xl text-gray-200 mb-10 font-light leading-relaxed max-w-xl">
+            <p className="text-xl 2xl:text-3xl text-gray-200 mb-10 2xl:mb-16 font-light leading-relaxed max-w-xl 2xl:max-w-3xl">
               Distribuição de frutas nacionais e importadas para o seu negócio. Qualidade, frescor e compromisso do produtor diretamente para você.
             </p>
 
@@ -55,7 +46,7 @@ export default function Hero() {
                 Seja Fornecedor
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

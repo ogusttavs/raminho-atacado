@@ -3,28 +3,28 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-2 block">
+    <section id="contact" className="py-24 2xl:py-32 bg-white">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16">
+        <div className="text-center mb-16 2xl:mb-24">
+          <span className="text-secondary font-bold tracking-widest uppercase text-sm 2xl:text-base mb-2 block">
             Fale Conosco
           </span>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-serif font-bold text-primary">
             Entre em Contato
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 2xl:gap-32">
           {/* Units List - Matching Othil's Layout */}
           <div>
-            <h3 className="text-2xl font-serif font-bold text-primary mb-8 border-b border-gray-200 pb-4">
+            <h3 className="text-2xl 2xl:text-4xl font-serif font-bold text-primary mb-8 2xl:mb-12 border-b border-gray-200 pb-4">
               Nossas Unidades
             </h3>
 
-            <div className="space-y-12">
+            <div className="space-y-12 2xl:space-y-16">
               <div className="group">
-                <h4 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                <h4 className="text-xl 2xl:text-2xl font-bold text-primary mb-4 flex items-center gap-2">
                   <MapPin className="text-secondary" />
                   Unidade Mercado Municipal
                 </h4>

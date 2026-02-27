@@ -44,24 +44,24 @@ export default function Partners() {
     ];
 
     return (
-        <section id="partners" className="py-24 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="partners" className="py-24 2xl:py-32 bg-gray-50">
+            <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16">
                 {/* Header */}
-                <div className="text-center mb-16">
-                    <span className="text-secondary font-bold tracking-widest uppercase text-sm mb-2 block">
+                <div className="text-center mb-16 2xl:mb-24">
+                    <span className="text-secondary font-bold tracking-widest uppercase text-sm 2xl:text-base mb-2 block">
                         Nossos Parceiros
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-serif font-bold text-primary">
                         Grandes Marcas ao Nosso Lado
                     </h2>
-                    <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                    <p className="text-lg 2xl:text-2xl text-gray-600 mt-4 2xl:mt-6 max-w-2xl 2xl:max-w-4xl mx-auto">
                         Trabalhamos com as maiores referências do mercado de frutas. Quem fornece para a Raminho sabe que está em boa companhia.
                     </p>
                     <div className="w-24 h-1 bg-secondary mx-auto mt-6" />
                 </div>
 
                 {/* Partners Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 2xl:gap-12 mb-12 2xl:mb-20">
                     <AnimatePresence mode="popLayout">
                         {partners.map((partner, index) => {
                             const isHiddenOnMobile = !showAll && index >= 2;
@@ -78,23 +78,23 @@ export default function Partners() {
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-secondary/10 to-transparent rounded-bl-full" />
 
                                     {/* Partner Logo */}
-                                    <div className={`w-full h-24 flex items-center justify-start mb-6 ${partner.logoBg ? partner.logoBg + ' rounded-xl px-4' : ''}`}>
+                                    <div className={`w-full h-24 flex items-center justify-start mb-6 2xl:mb-8 ${partner.logoBg ? partner.logoBg + ' rounded-xl px-4' : ''}`}>
                                         <img
                                             src={partner.logo}
                                             alt={`Logo ${partner.name}`}
                                             loading="lazy"
                                             width="160"
                                             height="80"
-                                            className="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                                            className="h-20 2xl:h-28 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                                         />
                                     </div>
 
-                                    <h3 className="text-2xl font-serif font-bold text-primary mb-2">{partner.name}</h3>
-                                    <span className="inline-block px-3 py-1 bg-secondary/10 text-primary text-xs font-bold uppercase tracking-wider rounded-full mb-4">
+                                    <h3 className="text-2xl 2xl:text-3xl font-serif font-bold text-primary mb-2 2xl:mb-4">{partner.name}</h3>
+                                    <span className="inline-block px-3 py-1 bg-secondary/10 text-primary text-xs 2xl:text-sm font-bold uppercase tracking-wider rounded-full mb-4">
                                         {partner.since}
                                     </span>
-                                    <p className="text-gray-600 leading-relaxed mb-4">{partner.description}</p>
-                                    <div className="flex items-center gap-2 text-sm font-medium text-secondary">
+                                    <p className="text-gray-600 text-sm 2xl:text-lg mb-6 2xl:mb-8 line-clamp-3">{partner.description}</p>
+                                    <div className="flex items-center gap-2 text-sm 2xl:text-base font-medium text-secondary">
                                         <Handshake size={16} />
                                         {partner.specialty}
                                     </div>

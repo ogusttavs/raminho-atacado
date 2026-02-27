@@ -4,36 +4,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#002855" />
   <title>Raminho Importadora - Atacado de Frutas Premium</title>
   <meta name="description"
     content="Especialistas em frutas premium, nacionais e importadas. Abastecemos restaurantes, empórios, hotéis e feiras direto do Mercado Municipal de São Paulo." />
 
   <!-- Preload LCP Image -->
-  <link rel="preload" as="image" href="/hero-bg.webp" />
+  <link rel="preload" as="image" href="/hero-bg.webp" fetchpriority="high" />
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Raminho Importadora - Atacado de Frutas" />
+  <meta property="og:title" content="Raminho Importadora - Atacado de Frutas Premium" />
   <meta property="og:description"
     content="Tradição que atravessa gerações. Relacionamento duradouro com produtores para garantir qualidade no seu negócio." />
   <meta property="og:image" content="/favicon.png" />
+  <meta property="og:url" content="https://raminhoimportadora.com.br/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
 
-  <!-- Preconnect and Fonts -->
+  <!-- Preconnect and Fonts (reduced to essential weights only) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet" media="print" onload="this.media='all'">
   <noscript>
     <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
   </noscript>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WholesaleStore",
+    "name": "Raminho Importadora",
+    "image": "https://raminhoimportadora.com.br/favicon.png",
+    "description": "Distribuidora atacadista de frutas premium, nacionais e importadas. Abastecendo restaurantes, hotéis e empórios.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua da Cantareira, 306 - Rua J Box 16 e Rua O 46",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "01024-000",
+      "addressCountry": "BR"
+    },
+    "telephone": "+5511940361803",
+    "url": "https://raminhoimportadora.com.br",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>

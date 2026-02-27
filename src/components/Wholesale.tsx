@@ -36,17 +36,17 @@ export default function Wholesale() {
   ];
 
   return (
-    <section id="wholesale" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="max-w-2xl">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs mb-2 block">Atacado B2B</span>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary leading-tight">
+    <section id="wholesale" className="py-24 2xl:py-32 bg-white">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 2xl:mb-24 gap-8">
+          <div className="max-w-2xl 2xl:max-w-4xl">
+            <span className="text-secondary font-bold tracking-wider uppercase text-xs 2xl:text-base mb-2 block">Atacado B2B</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl 2xl:text-7xl font-serif font-bold text-primary leading-tight">
               Parceria Estratégica <br />
               <span className="text-gray-400 font-light italic">para o seu Negócio</span>
             </h2>
           </div>
-          <p className="text-gray-600 max-w-md text-lg">
+          <p className="text-gray-600 max-w-md 2xl:max-w-xl text-lg 2xl:text-2xl">
             Condições especiais e regularidade no fornecimento para quem busca excelência.
           </p>
         </div>
